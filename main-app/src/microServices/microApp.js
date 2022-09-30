@@ -1,12 +1,13 @@
 import React from "react";
 
 const MicroApp = ({ name, host, history }) => {
-
   React.useEffect(() => {
     const appID = `app_id_${name}`;
 
     const renderMicroApp = () => {
-      window[`render${name}`](`${name}-container`, history);
+      console.log("window", window);
+
+      window[`render_${name}`](`${name}-container`, history);
     };
 
     if (document.getElementById(appID)) {
@@ -28,7 +29,7 @@ const MicroApp = ({ name, host, history }) => {
       });
 
     return () => {
-      console.log('Micro APP', window)
+      console.log("Micro APP", window);
       window[`unmount${name}`] && window[`unmount${name}`](`${name}-container`);
     };
   });

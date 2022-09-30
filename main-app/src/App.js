@@ -22,8 +22,7 @@ function App({ history = defaultHistory }) {
           MAIN APP
         </a>
       </header>
-
-      <MicroApp history={history} host={"http://localhost:3002"} name="Blogs" />
+      <MicroApp history={history} host={"http://localhost:4001"} name="Counter" />
       <br />
     </div>
   );
