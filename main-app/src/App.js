@@ -4,6 +4,8 @@ import MicroApp from "./microServices/microApp";
 import { createBrowserHistory } from "history";
 
 const defaultHistory = createBrowserHistory();
+const MICRO_APP_NAME = process.env.REACT_APP_MICRO_APP_NAME
+const MICRO_APP_URL = process.env.REACT_APP_MICRO_APP_URL
 
 function App({ history = defaultHistory }) {
   return (
@@ -22,7 +24,7 @@ function App({ history = defaultHistory }) {
           MAIN APP
         </a>
       </header>
-      <MicroApp history={history} host={"http://localhost:4001"} name="Counter" />
+      <MicroApp history={history} host={MICRO_APP_URL} name={MICRO_APP_NAME} />
       <br />
     </div>
   );
