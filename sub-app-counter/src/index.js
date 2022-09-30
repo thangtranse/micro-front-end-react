@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 
-const APP_NAME = "Counter";
+const APP_NAME = process.env.REACT_APP_NAME;
 const RENDER_SUB_APP = `render_${APP_NAME}`;
 const UNMOUNT_SUB_APP = `unmount_${APP_NAME}`;
 
